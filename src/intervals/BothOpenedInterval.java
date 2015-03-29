@@ -11,4 +11,8 @@ public class BothOpenedInterval extends Interval {
 		return Opening.BOTH_OPENED;
 	}
 
+	@Override
+	public boolean includes(double value) {
+		return value > this.minimum && value < this.maximum;
+	}
 }

@@ -11,4 +11,9 @@ public class LeftOpenedInterval extends Interval {
 		return Opening.LEFT_OPENED;
 	}
 
+	@Override
+	public boolean includes(double value) {
+		// TODO Auto-generated method stub
+		return value > this.minimum && value <= this.maximum;
+	}
 }
