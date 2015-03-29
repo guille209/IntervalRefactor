@@ -4,7 +4,7 @@ public class Interval {
 
 	private double minimum;
 	private double maximum;
-	private Opening opening;
+	protected Opening opening;
 
 	public Interval(double minimum, double maximum,Opening opening) {
 		this.minimum = minimum;
@@ -12,10 +12,10 @@ public class Interval {
 		this.opening = opening;
 	}
 	
-	public Opening getType(){
+	public Opening getType() {
 		return opening;
 	}
-
+	
 	public double midPoint() {
 		return (this.minimum + this.maximum) / 2;
 	}
