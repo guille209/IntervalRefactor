@@ -18,9 +18,15 @@ public abstract class Interval {
 
 	public abstract boolean includes(double value);
 
-	public boolean includes(Interval interval) {
-		return false;
-	}
+	public abstract boolean includes(Interval interval);
+
+	public abstract boolean includes(BothOpenedInterval interval);
+
+	public abstract boolean includes(LeftOpenedInterval interval);
+
+	public abstract boolean includes(RightOpenedInterval interval);
+
+	public abstract boolean includes(UnOpenedInterval interval);
 
 	public boolean intersectsWith(Interval interval) {
 		// TODO
@@ -33,14 +39,9 @@ public abstract class Interval {
 	}
 
 	@Override
-	public String toString() {
-		return "Interval[" + minimum + "," + maximum + "]";
-	}
-
-	@Override
 	public boolean equals(Object object) {
 		Interval intervalo = (Interval) object;
 		return maximum == intervalo.maximum && minimum == intervalo.minimum
-				&& opening.equals(intervalo.opening);
+				&& this.equals(intervalo);
 	}
 }
