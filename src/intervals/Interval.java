@@ -6,16 +6,15 @@ public class Interval {
 	private double maximum;
 	protected Opening opening;
 
-	public Interval(double minimum, double maximum,Opening opening) {
+	public Interval(double minimum, double maximum) {
 		this.minimum = minimum;
 		this.maximum = maximum;
-		this.opening = opening;
 	}
-	
+
 	public Opening getType() {
 		return opening;
 	}
-	
+
 	public double midPoint() {
 		return (this.minimum + this.maximum) / 2;
 	}
