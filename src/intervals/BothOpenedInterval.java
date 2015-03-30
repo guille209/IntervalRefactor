@@ -25,6 +25,8 @@ public class BothOpenedInterval extends Interval {
 
 	@Override
 	public boolean includes(BothOpenedInterval interval) {
+		System.out.println("Comparamos "+this+"\n con "+interval+" Resultado: "+(interval.minimum <= this.minimum
+				&& interval.maximum >= this.maximum));
 		return interval.minimum <= this.minimum
 				&& interval.maximum >= this.maximum;
 	}
