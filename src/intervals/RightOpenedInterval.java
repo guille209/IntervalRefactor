@@ -21,27 +21,27 @@ public class RightOpenedInterval extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return interval.includes(this);
+		return interval.isIncluded(this);
 	}
 
 	@Override
-	public boolean includes(BothOpenedInterval interval) {
+	public boolean isIncluded(BothOpenedInterval interval) {
 		return menorMayorIgual(interval);
 
 	}
 
 	@Override
-	public boolean includes(LeftOpenedInterval interval) {
+	public boolean isIncluded(LeftOpenedInterval interval) {
 		return menorMayorIgual(interval);
 	}
 
 	@Override
-	public boolean includes(RightOpenedInterval interval) {
+	public boolean isIncluded(RightOpenedInterval interval) {
 		return menorIgualMayorIgual(interval);
 	}
 
 	@Override
-	public boolean includes(UnOpenedInterval interval) {
+	public boolean isIncluded(UnOpenedInterval interval) {
 		return menorIgualMayorIgual(interval);
 	}
 

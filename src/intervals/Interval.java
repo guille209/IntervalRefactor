@@ -23,13 +23,13 @@ public abstract class Interval implements Cloneable {
 
 	public abstract boolean includes(Interval interval);
 
-	public abstract boolean includes(BothOpenedInterval interval);
+	public abstract boolean isIncluded(BothOpenedInterval interval);
 
-	public abstract boolean includes(LeftOpenedInterval interval);
+	public abstract boolean isIncluded(LeftOpenedInterval interval);
 
-	public abstract boolean includes(RightOpenedInterval interval);
+	public abstract boolean isIncluded(RightOpenedInterval interval);
 
-	public abstract boolean includes(UnOpenedInterval interval);
+	public abstract boolean isIncluded(UnOpenedInterval interval);
 
 	public boolean intersectsWith(Interval interval) {
 		// TODO
@@ -42,8 +42,11 @@ public abstract class Interval implements Cloneable {
 	}
 
 	public boolean menorIgualMayorIgual(Interval interval) {
-		return interval.minimum.getValue() <= this.minimum.getValue()
-				&& interval.maximum.getValue() >= this.maximum.getValue();
+//		return interval.minimum.checkMinimum(this.minimum)
+//				&& interval.maximum.checkMaximum(this.maximum);
+
+		 return interval.minimum.getValue() <= this.minimum.getValue()
+		 && interval.maximum.getValue() >= this.maximum.getValue();
 	}
 
 	public boolean menorIgualMayor(Interval interval) {

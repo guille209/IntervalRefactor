@@ -21,26 +21,36 @@ public class BothOpenedInterval extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return interval.includes(this);
+		return interval.isIncluded(this);
 	}
 
 	@Override
-	public boolean includes(BothOpenedInterval interval) {
+	public boolean isIncluded(BothOpenedInterval interval) {
+		System.out.println("Soy un "+this+"\n me comparo con "+interval);
+		System.out.println();System.out.println();
 		return menorIgualMayorIgual(interval);
 	}
 
 	@Override
-	public boolean includes(LeftOpenedInterval interval) {
+	public boolean isIncluded(LeftOpenedInterval interval) {
+		System.out.println("Soy un "+this+"\n me comparo con "+interval);
+		System.out.println();System.out.println();
 		return menorIgualMayorIgual(interval);
 	}
 
 	@Override
-	public boolean includes(RightOpenedInterval interval) {
+	public boolean isIncluded(RightOpenedInterval interval) {
+		System.out.println("Soy un "+this+"\n me comparo con "+interval);
+		System.out.println();System.out.println();
+		
 		return menorIgualMayorIgual(interval);
 	}
 
 	@Override
-	public boolean includes(UnOpenedInterval interval) {
+	public boolean isIncluded(UnOpenedInterval interval) {
+		System.out.println("This: "+this+"\n Comparado con: "+interval);
+		System.out.println();
+		System.out.println();
 		return menorIgualMayorIgual(interval);
 	}
 
