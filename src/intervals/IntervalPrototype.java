@@ -7,7 +7,7 @@ public class IntervalPrototype {
 
 	private Map<String, Interval> prototypes;
 
-	public IntervalPrototype(int maximum, int minimum) {
+	public IntervalPrototype(double maximum, double minimum) {
 		prototypes = new HashMap<String, Interval>();
 		addInterval(Opening.BOTH_OPENED, new BothOpenedInterval(minimum,
 				maximum));
