@@ -1,13 +1,14 @@
 package intervals;
 
+import points.Point;
 import auxiliar.Opening;
 
 public abstract class Interval implements Cloneable {
 
-	protected double minimum;
-	protected double maximum;
+	protected Point minimum;
+	protected Point maximum;
 
-	public Interval(double minimum, double maximum) {
+	public Interval(Point minimum, Point maximum) {
 		this.minimum = minimum;
 		this.maximum = maximum;
 	}
@@ -15,7 +16,7 @@ public abstract class Interval implements Cloneable {
 	public abstract Opening getType();
 
 	public double midPoint() {
-		return (this.minimum + this.maximum) / 2;
+		return (this.minimum.getValue() + this.maximum.getValue()) / 2;
 	}
 
 	public abstract boolean includes(double value);
@@ -41,18 +42,18 @@ public abstract class Interval implements Cloneable {
 	}
 
 	public boolean menorIgualMayorIgual(Interval interval) {
-		return interval.minimum <= this.minimum
-				&& interval.maximum >= this.maximum;
+		return interval.minimum.getValue() <= this.minimum.getValue()
+				&& interval.maximum.getValue() >= this.maximum.getValue();
 	}
 
 	public boolean menorIgualMayor(Interval interval) {
-		return interval.minimum <= this.minimum
-				&& interval.maximum > this.maximum;
+		return interval.minimum.getValue() <= this.minimum.getValue()
+				&& interval.maximum.getValue() > this.maximum.getValue();
 	}
 
 	public boolean menorMayorIgual(Interval interval) {
-		return interval.minimum < this.minimum
-				&& interval.maximum >= this.maximum;
+		return interval.minimum.getValue() < this.minimum.getValue()
+				&& interval.maximum.getValue() >= this.maximum.getValue();
 	}
 
 	@Override

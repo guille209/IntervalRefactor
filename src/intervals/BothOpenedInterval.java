@@ -1,10 +1,11 @@
 package intervals;
 
+import points.Point;
 import auxiliar.Opening;
 
 public class BothOpenedInterval extends Interval {
 
-	public BothOpenedInterval(double minimum, double maximum) {
+	public BothOpenedInterval(Point minimum, Point maximum) {
 		super(minimum, maximum);
 	}
 
@@ -15,7 +16,7 @@ public class BothOpenedInterval extends Interval {
 
 	@Override
 	public boolean includes(double value) {
-		return value > this.minimum && value < this.maximum;
+		return value > this.minimum.getValue() && value < this.maximum.getValue();
 	}
 
 	@Override
