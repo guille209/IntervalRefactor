@@ -23,7 +23,7 @@ public class IntervalPrototype {
 				new Point(maximum)));
 		addInterval(Opening.LEFT_OPENED, new LeftOpenedInterval(new Point(minimum),
 				new Point(maximum)));
-		addInterval(Opening.UNOPENED, new UnOpenedInterval(minimum, maximum));
+		addInterval(Opening.UNOPENED, new UnOpenedInterval(new Point(minimum), new Point(maximum)));
 
 	}
 
