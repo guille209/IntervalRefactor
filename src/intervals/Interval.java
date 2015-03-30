@@ -45,6 +45,16 @@ public abstract class Interval implements Cloneable{
 				&& interval.maximum >= this.maximum;
 	}
 	
+	public boolean menorIgualMayor(Interval interval) {
+		return interval.minimum <= this.minimum
+				&& interval.maximum > this.maximum;
+	}
+	
+	public boolean menorMayorIgual(Interval interval) {
+		return interval.minimum < this.minimum
+				&& interval.maximum >= this.maximum;
+	}
+	
 	@Override
 	public boolean equals(Object object) {
 		Interval intervalo = (Interval) object;

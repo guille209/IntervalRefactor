@@ -44,11 +44,6 @@ public class RightOpenedInterval extends Interval {
 		return menorIgualMayorIgual(interval);
 	}
 
-	public boolean menorMayorIgual(Interval interval) {
-		return interval.minimum < this.minimum
-				&& interval.maximum >= this.maximum;
-	}
-
 	@Override
 	public String toString() {
 		return "Interval[" + minimum + "," + maximum + "," + this.getClass()

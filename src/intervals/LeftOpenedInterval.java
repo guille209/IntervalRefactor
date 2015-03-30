@@ -43,11 +43,6 @@ public class LeftOpenedInterval extends Interval {
 		return menorIgualMayorIgual(interval);
 	}
 
-	public boolean menorIgualMayor(Interval interval) {
-		return interval.minimum <= this.minimum
-				&& interval.maximum > this.maximum;
-	}
-
 	@Override
 	public String toString() {
 		return "Interval[" + minimum + "," + maximum + "," + this.getClass()
