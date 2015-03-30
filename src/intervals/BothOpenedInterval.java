@@ -25,7 +25,6 @@ public class BothOpenedInterval extends Interval {
 
 	@Override
 	public boolean includes(BothOpenedInterval interval) {
-
 		return menorIgualMayorIgual(interval);
 	}
 

@@ -2,7 +2,7 @@ package intervals;
 
 import auxiliar.Opening;
 
-public abstract class Interval implements Cloneable{
+public abstract class Interval implements Cloneable {
 
 	protected double minimum;
 	protected double maximum;
@@ -44,17 +44,17 @@ public abstract class Interval implements Cloneable{
 		return interval.minimum <= this.minimum
 				&& interval.maximum >= this.maximum;
 	}
-	
+
 	public boolean menorIgualMayor(Interval interval) {
 		return interval.minimum <= this.minimum
 				&& interval.maximum > this.maximum;
 	}
-	
+
 	public boolean menorMayorIgual(Interval interval) {
 		return interval.minimum < this.minimum
 				&& interval.maximum >= this.maximum;
 	}
-	
+
 	@Override
 	public boolean equals(Object object) {
 		Interval intervalo = (Interval) object;
@@ -66,6 +66,5 @@ public abstract class Interval implements Cloneable{
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
-	
-	
+
 }

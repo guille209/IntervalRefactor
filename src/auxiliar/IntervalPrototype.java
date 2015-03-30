@@ -12,10 +12,10 @@ import java.util.Map;
 
 public class IntervalPrototype {
 
-	private Map<String, Interval> prototypes;
+	private Map<Opening, Interval> prototypes;
 
 	public IntervalPrototype(double maximum, double minimum) {
-		prototypes = new HashMap<String, Interval>();
+		prototypes = new HashMap<Opening, Interval>();
 		addInterval(Opening.BOTH_OPENED, new BothOpenedInterval(minimum,
 				maximum));
 		addInterval(Opening.RIGHT_OPENED, new RightOpenedInterval(minimum,
@@ -27,14 +27,14 @@ public class IntervalPrototype {
 	}
 
 	public void addInterval(Opening type, Interval interval) {
-		prototypes.put(type.toString(), interval);
+		prototypes.put(type, interval);
 	}
 
 	public void removeInterval(Opening type) {
 		prototypes.remove(type.toString());
 	}
 
-	public Object prototype(String type) throws CloneNotSupportedException {
+	public Object prototype(Opening type) throws CloneNotSupportedException {
 		return prototypes.get(type).clone();
 	}
 }
