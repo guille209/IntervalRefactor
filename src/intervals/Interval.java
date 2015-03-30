@@ -1,6 +1,6 @@
 package intervals;
 
-public abstract class Interval {
+public abstract class Interval implements Cloneable{
 
 	protected double minimum;
 	protected double maximum;
@@ -44,4 +44,11 @@ public abstract class Interval {
 		return maximum == intervalo.maximum && minimum == intervalo.minimum
 				&& this.equals(intervalo);
 	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+	
+	
 }
