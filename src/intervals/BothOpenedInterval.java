@@ -1,5 +1,7 @@
 package intervals;
 
+import auxiliar.Opening;
+
 public class BothOpenedInterval extends Interval {
 
 	public BothOpenedInterval(double minimum, double maximum) {

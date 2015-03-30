@@ -1,4 +1,11 @@
-package intervals;
+package auxiliar;
+
+import intervals.BothOpenedInterval;
+
+import intervals.Interval;
+import intervals.LeftOpenedInterval;
+import intervals.RightOpenedInterval;
+import intervals.UnOpenedInterval;
 
 import java.util.HashMap;
 import java.util.Map;

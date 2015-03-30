@@ -1,4 +1,6 @@
-package intervals;
+package auxiliar;
+
+import intervals.Interval;
 
 public class IntervalFactory {
 

@@ -1,5 +1,7 @@
 package intervals;
 
+import auxiliar.Opening;
+
 public abstract class Interval implements Cloneable{
 
 	protected double minimum;
@@ -46,7 +48,7 @@ public abstract class Interval implements Cloneable{
 	}
 
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
 	
