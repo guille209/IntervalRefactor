@@ -25,24 +25,30 @@ public class LeftOpenedInterval extends Interval {
 
 	@Override
 	public boolean includes(BothOpenedInterval interval) {
-		return interval.minimum <= this.minimum
-				&& interval.maximum > this.maximum;
+		return menorIgualMayor(interval);
 	}
 
 	@Override
 	public boolean includes(LeftOpenedInterval interval) {
-		return interval.minimum <= this.minimum
-				&& interval.maximum >= this.maximum;
+		return menorIgualMayorIgual(interval);
 	}
 
 	@Override
 	public boolean includes(RightOpenedInterval interval) {
-		return interval.minimum <= this.minimum
-				&& interval.maximum > this.maximum;
+		return menorIgualMayor(interval);
 	}
 
 	@Override
 	public boolean includes(UnOpenedInterval interval) {
+		return menorIgualMayorIgual(interval);
+	}
+
+	public boolean menorIgualMayor(Interval interval) {
+		return interval.minimum <= this.minimum
+				&& interval.maximum > this.maximum;
+	}
+
+	public boolean menorIgualMayorIgual(Interval interval) {
 		return interval.minimum <= this.minimum
 				&& interval.maximum >= this.maximum;
 	}
