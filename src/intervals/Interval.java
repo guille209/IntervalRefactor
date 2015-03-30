@@ -44,7 +44,7 @@ public abstract class Interval implements Cloneable{
 	public boolean equals(Object object) {
 		Interval intervalo = (Interval) object;
 		return maximum == intervalo.maximum && minimum == intervalo.minimum
-				&& this.equals(intervalo);
+				&& this.getType().equals(intervalo.getType());
 	}
 
 	@Override

@@ -12,9 +12,17 @@ import java.util.Map;
 
 public class IntervalPrototype {
 
+	private static IntervalPrototype intervalPrototype = null;
+
 	private Map<String, Interval> prototypes;
 
-	public IntervalPrototype(double maximum, double minimum) {
+	public static IntervalPrototype getInstance(double maximum,double minimum) {
+		if (intervalPrototype == null)
+			intervalPrototype = new IntervalPrototype(maximum,minimum);
+		return intervalPrototype;
+	}
+
+	private IntervalPrototype(double maximum, double minimum) {
 		prototypes = new HashMap<String, Interval>();
 		addInterval(Opening.BOTH_OPENED, new BothOpenedInterval(minimum,
 				maximum));

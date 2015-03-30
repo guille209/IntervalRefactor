@@ -5,11 +5,9 @@ import intervals.Interval;
 public class IntervalFactory {
 
 	public static Interval getInterval(double minimum, double maximum,
-			Opening opening) {
-		IntervalPrototype intervalPrototype = new IntervalPrototype(maximum,
-				minimum);
+			Opening opening) {	
 		try {
-			return (Interval) intervalPrototype.prototype(opening.toString());
+			return (Interval) IntervalPrototype.getInstance(maximum, minimum).prototype(opening.toString());
 		} catch (CloneNotSupportedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
