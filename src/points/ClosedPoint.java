@@ -10,7 +10,7 @@ public class ClosedPoint extends Point {
 	@Override
 	public boolean isGreaterOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
-		return this.value >= p.value;
+		return greaterOrEquals(p);
 	}
 
 	@Override
@@ -22,7 +22,7 @@ public class ClosedPoint extends Point {
 	@Override
 	public boolean isLessOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
-		return this.value <= p.value;
+		return lessOrEquals(p);
 	}
 
 	@Override

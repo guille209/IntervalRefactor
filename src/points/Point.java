@@ -15,20 +15,12 @@ public abstract class Point {
 		return (this.getValue() + point.getValue()) / 2;
 	}
 	
-	public boolean menorIgual(Point point){
-		return value <= point.getValue(); 
+	public boolean greaterOrEquals(Point p) {
+		return value >= p.value;
 	}
-	
-	public boolean mayorIgual(Point point){
-		return value >= point.getValue(); 
-	}
-	
-	public boolean menor(Point point){
-		return value < point.getValue(); 
-	}
-	
-	public boolean mayor(Point point){
-		return value > point.getValue(); 
+
+	public boolean lessOrEquals(Point p) {
+		return value <= p.value;
 	}
 	
 	public abstract boolean checkMinimum(Point p);

@@ -38,10 +38,6 @@ public abstract class Interval implements Cloneable {
 		return null;
 	}
 
-	public boolean menorIgualMayorIgual(Interval interval) {
-		return interval.minimum.menorIgual(this.minimum)
-				&& interval.maximum.mayorIgual(this.maximum);
-	}
 
 	@Override
 	public boolean equals(Object object) {
