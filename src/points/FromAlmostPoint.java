@@ -8,50 +8,50 @@ public class FromAlmostPoint extends Point {
 	}
 
 	@Override
-	public boolean checkMinimum() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean checkMaximum() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
 	public boolean isGreaterOrEquals(ExactPoint p) {
 		// TODO Auto-generated method stub
-		return false;
+		return this.value >= p.value;
 	}
 
 	@Override
 	public boolean isGreaterOrEquals(FromAlmostPoint p) {
 		// TODO Auto-generated method stub
-		return false;
+		return this.value >= p.value;
 	}
 
 	@Override
 	public boolean isGreaterOrEquals(ToAlmostPoint p) {
 		// TODO Auto-generated method stub
-		return false;
+		return this.value >= p.value;
 	}
 
 	@Override
 	public boolean isLessOrEquals(ExactPoint p) {
 		// TODO Auto-generated method stub
-		return false;
+		return this.value <= p.value;
 	}
 
 	@Override
 	public boolean isLessOrEquals(FromAlmostPoint p) {
 		// TODO Auto-generated method stub
-		return false;
+		return this.value <= p.value;
 	}
 
 	@Override
 	public boolean isLessOrEquals(ToAlmostPoint p) {
 		// TODO Auto-generated method stub
-		return false;
+		return this.value <= p.value;
+	}
+
+	@Override
+	public boolean checkMinimum(Point p) {
+		// TODO Auto-generated method stub
+		return p.isGreaterOrEquals(this);
+	}
+
+	@Override
+	public boolean checkMaximum(Point p) {
+		// TODO Auto-generated method stub
+		return p.isLessOrEquals(this);
 	}
 }

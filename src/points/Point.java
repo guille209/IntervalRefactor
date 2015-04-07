@@ -31,9 +31,9 @@ public abstract class Point {
 		return value > point.getValue(); 
 	}
 	
-	public abstract boolean checkMinimum();
+	public abstract boolean checkMinimum(Point p);
 	
-	public abstract boolean checkMaximum();
+	public abstract boolean checkMaximum(Point p);
 	
 	public abstract boolean isGreaterOrEquals(ExactPoint p);
 	public abstract boolean isGreaterOrEquals(FromAlmostPoint p);
