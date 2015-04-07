@@ -10,32 +10,32 @@ public class OpenedPoint extends Point {
 	@Override
 	public boolean isGreaterOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
-		return this.value >= p.value;
+		return greaterOrEquals(p);
 	}
 
 	@Override
 	public boolean isGreaterOrEquals(OpenedPoint p) {
 		// TODO Auto-generated method stub
-		return this.value >= p.value;
+		return greaterOrEquals(p);
 	}
 
 	@Override
 	public boolean isLessOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
-		return this.value <= p.value;
+		return lessOrEquals(p);
 	}
 
 	@Override
 	public boolean isLessOrEquals(OpenedPoint p) {
 		// TODO Auto-generated method stub
-		return this.value <= p.value;
+		return lessOrEquals(p);
 	}
 	
 	public boolean greaterOrEquals(Point p){
-		return value > p.value;
+		return value >= p.value;
 	}
 	public boolean lessOrEquals(Point p){
-		return value < p.value;
+		return value <= p.value;
 	}
 
 	@Override
