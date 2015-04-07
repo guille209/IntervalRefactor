@@ -16,7 +16,7 @@ public abstract class Interval implements Cloneable {
 	public abstract Opening getType();
 
 	public double midPoint() {
-		return (this.minimum.getValue() + this.maximum.getValue()) / 2;
+		return minimum.midPoint(maximum);
 	}
 
 	public abstract boolean includes(double value);
