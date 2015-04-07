@@ -30,5 +30,17 @@ public abstract class Point {
 	public boolean mayor(Point point){
 		return value > point.getValue(); 
 	}
+	
+	public abstract boolean checkMinimum();
+	
+	public abstract boolean checkMaximum();
+	
+	public abstract boolean isGreaterOrEquals(ExactPoint p);
+	public abstract boolean isGreaterOrEquals(FromAlmostPoint p);
+	public abstract boolean isGreaterOrEquals(ToAlmostPoint p);
+	
+	public abstract boolean isLessOrEquals(ExactPoint p);
+	public abstract boolean isLessOrEquals(FromAlmostPoint p);
+	public abstract boolean isLessOrEquals(ToAlmostPoint p);
 
 }
