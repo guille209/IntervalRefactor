@@ -14,21 +14,9 @@ public abstract class Point {
 	public double midPoint(Point point) {
 		return (this.getValue() + point.getValue()) / 2;
 	}
-
-	public abstract boolean checkMinimum(Point point);
-
-	public abstract boolean checkMinimum(ExactPoint point);
-
-	public abstract boolean checkMinimum(FromAlmostPoint point);
-
-	public abstract boolean checkMinimum(ToAlmostPoint point);
-
-	public abstract boolean checkMaximum(Point point);
-
-	public abstract boolean checkMaximum(ExactPoint point);
-
-	public abstract boolean checkMaximum(FromAlmostPoint point);
-
-	public abstract boolean checkMaximum(ToAlmostPoint point);
+	
+	public boolean menorIgual(Point point){
+		return value <= point.getValue(); 
+	}
 
 }
