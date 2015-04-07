@@ -26,8 +26,8 @@ public class UnOpenedInterval extends Interval {
 
 	@Override
 	public boolean isIncluded(BothOpenedInterval interval) {
-		return interval.minimum.getValue() < this.minimum.getValue()
-				&& interval.maximum.getValue() > this.maximum.getValue();
+		return interval.minimum.menor(this.minimum)
+				&& interval.maximum.mayor(this.maximum);
 	}
 
 	@Override

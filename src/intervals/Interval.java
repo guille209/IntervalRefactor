@@ -51,11 +51,11 @@ public abstract class Interval implements Cloneable {
 
 	public boolean menorIgualMayor(Interval interval) {
 		return interval.minimum.menorIgual(this.minimum)
-				&& interval.maximum.getValue() > this.maximum.getValue();
+				&& interval.maximum.mayor(this.maximum);
 	}
 
 	public boolean menorMayorIgual(Interval interval) {
-		return interval.minimum.getValue() < this.minimum.getValue()
+		return interval.minimum.menor(this.minimum)
 				&& interval.maximum.mayorIgual(this.maximum);
 	}
 
