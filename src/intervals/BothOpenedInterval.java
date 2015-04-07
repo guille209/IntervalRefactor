@@ -59,5 +59,7 @@ public class BothOpenedInterval extends Interval {
 		return "Interval[" + minimum + "," + maximum + "," + this.getClass()
 				+ "]";
 	}
+	
+	
 
 }

@@ -10,6 +10,10 @@ public abstract class Point {
 	public double getValue() {
 		return value;
 	}
+	
+	public double midPoint(Point point) {
+		return (this.getValue() + point.getValue()) / 2;
+	}
 
 	public abstract boolean checkMinimum(Point point);
 
