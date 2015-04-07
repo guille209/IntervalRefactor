@@ -14,13 +14,7 @@ public class ExactPoint extends Point {
 	}
 
 	@Override
-	public boolean isGreaterOrEquals(FromAlmostPoint p) {
-		// TODO Auto-generated method stub
-		return this.value > p.value;
-	}
-
-	@Override
-	public boolean isGreaterOrEquals(ToAlmostPoint p) {
+	public boolean isGreaterOrEquals(OpenedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value > p.value;
 	}
@@ -32,13 +26,7 @@ public class ExactPoint extends Point {
 	}
 
 	@Override
-	public boolean isLessOrEquals(FromAlmostPoint p) {
-		// TODO Auto-generated method stub
-		return this.value < p.value;
-	}
-
-	@Override
-	public boolean isLessOrEquals(ToAlmostPoint p) {
+	public boolean isLessOrEquals(OpenedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value < p.value;
 	}

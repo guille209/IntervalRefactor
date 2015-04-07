@@ -1,6 +1,7 @@
 package auxiliar;
 
 import intervals.BothOpenedInterval;
+
 import intervals.Interval;
 import intervals.LeftOpenedInterval;
 import intervals.RightOpenedInterval;
@@ -10,9 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import points.ExactPoint;
-import points.FromAlmostPoint;
+import points.OpenedPoint;
 import points.Point;
-import points.ToAlmostPoint;
 
 public class IntervalPrototype {
 
@@ -21,11 +21,11 @@ public class IntervalPrototype {
 	public IntervalPrototype(double maximum, double minimum) {
 		prototypes = new HashMap<Opening, Interval>();
 		addInterval(Opening.BOTH_OPENED, new BothOpenedInterval(
-				new FromAlmostPoint(minimum), new ToAlmostPoint(maximum)));
+				new OpenedPoint(minimum), new OpenedPoint(maximum)));
 		addInterval(Opening.RIGHT_OPENED, new RightOpenedInterval(
-				new ExactPoint(minimum), new ToAlmostPoint(maximum)));
+				new ExactPoint(minimum), new OpenedPoint(maximum)));
 		addInterval(Opening.LEFT_OPENED, new LeftOpenedInterval(
-				new FromAlmostPoint(minimum), new ExactPoint(maximum)));
+				new OpenedPoint(minimum), new ExactPoint(maximum)));
 		addInterval(Opening.UNOPENED, new UnOpenedInterval(new ExactPoint(
 				minimum), new ExactPoint(maximum)));
 

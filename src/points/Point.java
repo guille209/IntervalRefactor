@@ -36,11 +36,9 @@ public abstract class Point {
 	public abstract boolean checkMaximum(Point p);
 	
 	public abstract boolean isGreaterOrEquals(ExactPoint p);
-	public abstract boolean isGreaterOrEquals(FromAlmostPoint p);
-	public abstract boolean isGreaterOrEquals(ToAlmostPoint p);
+	public abstract boolean isGreaterOrEquals(OpenedPoint p);
 	
 	public abstract boolean isLessOrEquals(ExactPoint p);
-	public abstract boolean isLessOrEquals(FromAlmostPoint p);
-	public abstract boolean isLessOrEquals(ToAlmostPoint p);
+	public abstract boolean isLessOrEquals(OpenedPoint p);
 
 }

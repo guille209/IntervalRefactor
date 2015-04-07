@@ -1,8 +1,8 @@
 package points;
 
-public class ToAlmostPoint extends Point {
+public class OpenedPoint extends Point {
 
-	public ToAlmostPoint(double value) {
+	public OpenedPoint(double value) {
 		super(value);
 		// TODO Auto-generated constructor stub
 	}
@@ -14,13 +14,7 @@ public class ToAlmostPoint extends Point {
 	}
 
 	@Override
-	public boolean isGreaterOrEquals(FromAlmostPoint p) {
-		// TODO Auto-generated method stub
-		return this.value >= p.value;
-	}
-
-	@Override
-	public boolean isGreaterOrEquals(ToAlmostPoint p) {
+	public boolean isGreaterOrEquals(OpenedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value >= p.value;
 	}
@@ -32,13 +26,7 @@ public class ToAlmostPoint extends Point {
 	}
 
 	@Override
-	public boolean isLessOrEquals(FromAlmostPoint p) {
-		// TODO Auto-generated method stub
-		return this.value <= p.value;
-	}
-
-	@Override
-	public boolean isLessOrEquals(ToAlmostPoint p) {
+	public boolean isLessOrEquals(OpenedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value <= p.value;
 	}
