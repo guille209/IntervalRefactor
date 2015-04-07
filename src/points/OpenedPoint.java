@@ -30,6 +30,13 @@ public class OpenedPoint extends Point {
 		// TODO Auto-generated method stub
 		return this.value <= p.value;
 	}
+	
+	public boolean greaterOrEquals(Point p){
+		return value > p.value;
+	}
+	public boolean lessOrEquals(Point p){
+		return value < p.value;
+	}
 
 	@Override
 	public boolean checkMinimum(Point p) {
