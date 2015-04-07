@@ -8,7 +8,7 @@ public class OpenedPoint extends Point {
 	}
 
 	@Override
-	public boolean isGreaterOrEquals(ExactPoint p) {
+	public boolean isGreaterOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value >= p.value;
 	}
@@ -20,7 +20,7 @@ public class OpenedPoint extends Point {
 	}
 
 	@Override
-	public boolean isLessOrEquals(ExactPoint p) {
+	public boolean isLessOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value <= p.value;
 	}

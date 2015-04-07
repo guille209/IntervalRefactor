@@ -1,6 +1,6 @@
 package intervals;
 
-import points.ExactPoint;
+import points.ClosedPoint;
 import points.Point;
 import auxiliar.Opening;
 
@@ -21,7 +21,7 @@ public abstract class Interval implements Cloneable {
 	}
 
 	public boolean includes(double value) {
-		ExactPoint point = new ExactPoint(value);
+		ClosedPoint point = new ClosedPoint(value);
 		return this.minimum.checkMinimum(point)
 				&& this.maximum.checkMaximum(point);
 	}

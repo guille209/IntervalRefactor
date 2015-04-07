@@ -10,7 +10,7 @@ import intervals.UnOpenedInterval;
 import java.util.HashMap;
 import java.util.Map;
 
-import points.ExactPoint;
+import points.ClosedPoint;
 import points.OpenedPoint;
 import points.Point;
 
@@ -23,11 +23,11 @@ public class IntervalPrototype {
 		addInterval(Opening.BOTH_OPENED, new BothOpenedInterval(
 				new OpenedPoint(minimum), new OpenedPoint(maximum)));
 		addInterval(Opening.RIGHT_OPENED, new RightOpenedInterval(
-				new ExactPoint(minimum), new OpenedPoint(maximum)));
+				new ClosedPoint(minimum), new OpenedPoint(maximum)));
 		addInterval(Opening.LEFT_OPENED, new LeftOpenedInterval(
-				new OpenedPoint(minimum), new ExactPoint(maximum)));
-		addInterval(Opening.UNOPENED, new UnOpenedInterval(new ExactPoint(
-				minimum), new ExactPoint(maximum)));
+				new OpenedPoint(minimum), new ClosedPoint(maximum)));
+		addInterval(Opening.UNOPENED, new UnOpenedInterval(new ClosedPoint(
+				minimum), new ClosedPoint(maximum)));
 
 	}
 

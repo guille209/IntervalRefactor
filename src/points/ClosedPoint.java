@@ -1,14 +1,14 @@
 package points;
 
-public class ExactPoint extends Point {
+public class ClosedPoint extends Point {
 
-	public ExactPoint(double value) {
+	public ClosedPoint(double value) {
 		super(value);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public boolean isGreaterOrEquals(ExactPoint p) {
+	public boolean isGreaterOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value >= p.value;
 	}
@@ -20,7 +20,7 @@ public class ExactPoint extends Point {
 	}
 
 	@Override
-	public boolean isLessOrEquals(ExactPoint p) {
+	public boolean isLessOrEquals(ClosedPoint p) {
 		// TODO Auto-generated method stub
 		return this.value <= p.value;
 	}
