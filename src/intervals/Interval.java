@@ -28,14 +28,6 @@ public abstract class Interval implements Cloneable {
 
 	public abstract boolean includes(Interval interval);
 
-	public abstract boolean isIncluded(BothOpenedInterval interval);
-
-	public abstract boolean isIncluded(LeftOpenedInterval interval);
-
-	public abstract boolean isIncluded(RightOpenedInterval interval);
-
-	public abstract boolean isIncluded(UnOpenedInterval interval);
-
 	public boolean intersectsWith(Interval interval) {
 		// TODO
 		return false;
