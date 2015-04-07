@@ -1,5 +1,6 @@
 package intervals;
 
+import points.ExactPoint;
 import points.Point;
 import auxiliar.Opening;
 
@@ -19,7 +20,11 @@ public abstract class Interval implements Cloneable {
 		return minimum.midPoint(maximum);
 	}
 
-	public abstract boolean includes(double value);
+	public boolean includes(double value) {
+		ExactPoint point = new ExactPoint(value);
+		return this.minimum.checkMinimum(point)
+				&& this.maximum.checkMaximum(point);
+	}
 
 	public abstract boolean includes(Interval interval);
 
@@ -42,8 +47,8 @@ public abstract class Interval implements Cloneable {
 	}
 
 	public boolean menorIgualMayorIgual(Interval interval) {
-		 return interval.minimum.menorIgual(this.minimum)
-		 && interval.maximum.mayorIgual(this.maximum);
+		return interval.minimum.menorIgual(this.minimum)
+				&& interval.maximum.mayorIgual(this.maximum);
 	}
 
 	public boolean menorIgualMayor(Interval interval) {
