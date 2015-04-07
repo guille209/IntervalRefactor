@@ -18,5 +18,9 @@ public abstract class Point {
 	public boolean menorIgual(Point point){
 		return value <= point.getValue(); 
 	}
+	
+	public boolean mayorIgual(Point point){
+		return value >= point.getValue(); 
+	}
 
 }
